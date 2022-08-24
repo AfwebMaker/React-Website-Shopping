@@ -1,0 +1,14 @@
+@import url('../src/fontiran.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color:#fff ;
+}
+
+@layer components {
+    .slidingNavbar{
+      @apply bg-color-body-light absolute top-[80px] right-0 w-full flex flex-col items-center  lg:hidden h-[calc(100vh-80px)] py-5 px-20 transition-all duration-500 ;
+    }
+  }
