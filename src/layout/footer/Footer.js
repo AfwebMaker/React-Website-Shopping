@@ -60,7 +60,7 @@ const footerContent = [
 
 const Footer = () => {
   return (
-    <footer className="text-center bg-color-footer px-[20px] md:px-[32px] xl:px-[72px] pt-14 flex items-center flex-col">
+    <footer className="text-center bg-color-main-2 px-[20px] md:px-[32px] xl:px-[72px] pt-14 flex items-center flex-col">
       <div className="container">
         <div className="grid grid-cols-12">
           <div className="text-black col-span-12 lg:col-span-3 text-center lg:text-right mb-14 lg:m-0 transition-all duration-300">

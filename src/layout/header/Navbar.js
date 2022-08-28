@@ -2,12 +2,11 @@ import React, { useState } from "react";
 // react router dom
 import { Link } from "react-router-dom";
 // react icons
-import { FiSearch, FiMenu } from "react-icons/fi";
-import { IoMdClose} from "react-icons/io";
-import { BsFillBagDashFill } from "react-icons/bs";
+import { BsFillBagFill } from "react-icons/bs";
 //component
 import NavbarMobile from "./NavbarMobile";
 import ProfileSubMenu from "./ProfileSubMenu";
+import Hamburger from "./Hamburger";
 
 const navbarContent = [
   {
@@ -34,27 +33,19 @@ const navbarContent = [
 
 const Navbar = () => {
   const [signIn] = useState(true);
-  const [hambergerMenu, setHambergerMenu] = useState(false)
-  const [valeu, setValeu] = useState("");
+  const [hamburgerMenu, setHamburgerMenu] = useState(false)
 
-  const changeHandler = (event) => {
-    setValeu(event.target.valeu);
-  };
-
- const clickHandler = () => {
-  setHambergerMenu(!hambergerMenu)
-    window.scrollTo(0, 0);
- }
+  const clickHandler = () => {
+    setHamburgerMenu(!hamburgerMenu)
+    // window.scrollTo(0, 0);
+  }
 
   return (
-    <div className="w-full relative">
-      <NavbarMobile menu={hambergerMenu} navbarContent={navbarContent} />
+    <div className="w-full relative border-b-[1px] border-gray-100">
+      <NavbarMobile menu={hamburgerMenu} navbarContent={navbarContent} />
       <div className="max-w-[1536px] mx-auto h-20 bg-color-main-3 flex items-center justify-between px-6 fixed w-full lg:static">
         <div className="lg:hidden px-2 py-2 ml-4 cursor-pointer" onClick={clickHandler}>
-          {
-            hambergerMenu ? <IoMdClose className="w-5 h-5 text-color-Text2 transition-all duration-300" /> : <FiMenu className="w-5 h-5 text-color-Text2 transition-all duration-300" />
-          }
-          
+            <Hamburger isOpen={hamburgerMenu} />  {/*hamburger icon*/}
         </div>
         <nav className="flex items-center">
           <div className="h-full">
@@ -82,28 +73,15 @@ const Navbar = () => {
         </nav>
         {signIn === true ? (
           <ul className="flex items-center h-full">
-            <li className="ml-1 hidden lg:flex items-center justify-center">
-              <div className=" form-group relative px-2">
-                <input
-                  type="text"
-                  value={valeu}
-                  onChange={changeHandler}
-                  className="flex w-32 h-10 pr-8 pl-4 py-3 text-sm font-normal placeholder:text-gray-400 rounded-lg bg-color-bg-search-navbar bg-clip-padding transition-all duration-300 caret-color-green outline-none emailHelp123ase-in-out m-0 focus:ring-4 focus:ring-color-light-main-1 focus:border focus:text-gray-600 focus:bg-color-main-3 focus:border-color-green"
-                  aria-describedby="emailHelp123"
-                  placeholder="جستجو"
-                />
-                <FiSearch className="absolute top-[10px] right-4 w-5 h-5 text-gray-400" />
-              </div>
-            </li>
             <li className="ml-1 flex">
               <Link
                 className="flex w-fit h-fit py-2 px-2 rounded-lg"
                 to=""
               >
-                <BsFillBagDashFill className="w-5 h-5 text-[#6e6d7a]" />
+                <BsFillBagFill className="w-5 h-5 text-[#6e6d7a]" />
               </Link>
             </li>
-            <li className="ml-1 hidden lg:flex h-full items-center">
+            <li className="ml-1 hidden lg:flex h-full items-center group">
               <Link
                 className="flex w-fit h-fit py-2 px-2 rounded-lg"
                 to=""
@@ -114,7 +92,10 @@ const Navbar = () => {
                   alt="Avatar"
                 />
               </Link>
-              <ProfileSubMenu />
+              <div className="hidden group-hover:flex">
+                <ProfileSubMenu />
+              </div>
+
             </li>
             <li className="ml-1 pr-2 w-[82px] h-10 hidden lg:flex">
               <Link
@@ -129,14 +110,6 @@ const Navbar = () => {
           <ul className="flex items-center">
             <li className="ml-1">
               <Link
-                className="hidden lg:flex w-fit h-fit py-2 px-3 rounded-lg"
-                to=""
-              >
-                <FiSearch className="w-5 h-5 text-color-Text2" />
-              </Link>
-            </li>
-            <li className="ml-1">
-              <Link
                 className="flex w-fit h-fit py-2 px-3 rounded-lg text-color-Text2 font-normal"
                 to=""
               >
@@ -145,7 +118,7 @@ const Navbar = () => {
             </li>
             <li className="ml-1">
               <Link
-                className="hidden lg:flex w-fit h-fit py-2 px-3 rounded-lg text-color-main-3 text-sm font-medium bg-color-green transition-all duration-300 hover:bg-opacity-[0.7]"
+                className="hidden lg:flex w-fit h-fit py-2 px-3 rounded-lg text-color-main-3 text-sm font-medium bg-color-main-1 transition-all duration-300 hover:bg-opacity-[0.7]"
                 to=""
               >
                 کار را به اشتراک بگذارید
