@@ -1,55 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 // react-router-dom
-import {Link} from 'react-router-dom'
-//
-import { Disclosure } from '@headlessui/react'
-// import { ChevronUpIcon } from '@heroicons/react/solid'
+// import {Link} from 'react-router-dom'
+
+// headlessui
+import { Disclosure, Transition } from "@headlessui/react";
 //react-icons
 import { IoIosArrowDown } from "react-icons/io";
+import { FiSearch } from "react-icons/fi";
 
 const NavbarMobile = ({ menu, navbarContent }) => {
+
+  const [value, setValue] = useState("");
+  const changeHandler = (e) => {
+    setValue(e.target.value)
+  };
+
   return (
     <div className={menu ? "slidingNavbar" : "slidingNavbar -right-[1000px]"}>
+        <div className=" form-group relative px-2 w-full">
+                <input
+                  type="text"
+                  value={value}
+                  onChange={changeHandler}
+                  className="flex w-full h-10 pr-10 pl-4 py-3 text-sm font-normal placeholder:text-gray-400 rounded-lg bg-color-bg-search-navbar bg-clip-padding transition-all duration-300 caret-color-main-1 outline-none emailHelp123ase-in-out m-0 focus:ring-4 focus:ring-color-light-main-1 border focus:text-gray-600 focus:bg-color-main-3 focus:border-color-main-1"
+                  aria-describedby="emailHelp123"
+                  placeholder="جستجو"
+                />
+                <FiSearch className="absolute top-[10px] right-5 w-5 h-5 text-gray-400" />
+        </div>
       <ul className="flex w-full flex-col items-center">
-      <div className="w-full px-4 pt-16">
-      <div className="mx-auto w-full max-w-3xl rounded-2xl bg-color-main-3 p-2">
-        <Disclosure>
-          {({ open }) => (
-            <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                <span>What is your refund policy?</span>
-                <IoIosArrowDown
-                  className={`${
-                    open ? 'rotate-180 transform' : ''
-                  } h-5 w-5 text-purple-500`}
-                />
-              </Disclosure.Button>
-              <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                If you're unhappy with your purchase for any reason, email us
-                within 90 days and we'll refund you in full, no questions asked.
-              </Disclosure.Panel>
-            </>
-          )}
-        </Disclosure>
-        <Disclosure as="div" className="mt-2">
-          {({ open }) => (
-            <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                <span>Do you offer technical support?</span>
-                <IoIosArrowDown
-                  className={`${
-                    open ? 'rotate-180 transform' : ''
-                  } h-5 w-5 text-purple-500`}
-                />
-              </Disclosure.Button>
-              <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                No.
-              </Disclosure.Panel>
-            </>
-          )}
-        </Disclosure>
-      </div>
-    </div>
+        <div className="w-full px-0 pt-16">
+          <div className="mx-auto w-full max-w-3xl rounded-lg bg-color-main-3 ">
+            {navbarContent.map((item) => (
+              <Disclosure key={item.id} as="div" className="mb-5 rounded-lg">
+                {({ open }) => (
+                  <>
+                    <Disclosure.Button className=" flex w-full justify-between rounded-lg bg-color-main-3 border border-color-main-1 px-4 py-3 text-left text-sm font-medium text-color-Text2 hover:ring-4 hover:ring-color-main-1/[.30] transition-all duration-200">
+                      <span>{item.title}</span>
+                      <IoIosArrowDown
+                        className={`${
+                          open ? "rotate-180 transform" : ""
+                        } h-5 w-5 text-color-main-1 transition-all duration-300`}
+                      />
+                    </Disclosure.Button>
+
+                    <Transition
+                      show={open}
+                      enter="transition duration-250 ease-out"
+                      enterFrom="transform scale-95 opacity-0"
+                      enterTo="transform scale-100 opacity-100"
+                      leave="transition duration-75 ease-out"
+                      leaveFrom="transform scale-100 opacity-100"
+                      leaveTo="transform scale-95 opacity-0"
+                    >
+                      <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500 ">
+                        No.
+                      </Disclosure.Panel>
+                    </Transition>
+                  </>
+                )}
+              </Disclosure>
+            ))}
+          </div>
+        </div>
         {/* {navbarContent.map((item) => (
           <li
             key={item.id}
