@@ -11,11 +11,11 @@ import { FiSearch } from "react-icons/fi";
 const profileItem = [
   {
     id: 1,
-    title: "پروفایل",
+    title: "مشخصات",
   },
   {
-    id: 2,
-    title: "ادیت پروفایل",
+    id: 2, 
+    title: "ویرایش نمایه",
   },
   {
     id: 3,
@@ -23,11 +23,11 @@ const profileItem = [
   },
   {
     id: 4,
-    title: "مجموعه ها",
+    title: "مجموعه های من",
   },
   {
     id: 5,
-    title: "تنظیمات اکانت",
+    title: "تنظیمات حساب",
   },
   {
     id: 6,
@@ -98,19 +98,19 @@ const NavbarMobile = ({ menu, navbarContent }) => {
             className="rounded-full w-32 mb-4 mx-auto"
             alt="Avatar"
           />
-          <h5 className="text-xl font-medium leading-tight mb-2">John Doe</h5>
-          <p className="text-gray-500">Web designer</p>
+          <h5 className="text-xl font-medium leading-tight mb-2">سید میثاق حمزه زاده موسوی</h5>
+          <p className="text-gray-500">برنامه نویس وب</p>
         </div>
         <div className="grid grid-cols-12 my-10 border border-color-main-1 hover:ring-4 hover:ring-color-light-main-1 rounded-lg p-5 max-w-3xl m-auto transition-all duration-300">
           {profileItem.map((item) => (
-            <span className="w-full col-span-6 px-16">
+            <span className="w-full col-span-12 sm:col-span-6 px-8 sm:px-16 py-1">
               <Link
                 key={item.id}
                 to="/"
                 className={
                   item.title === "خروج"
-                    ? " rounded-lg flex items-center justify-center w-full text-red-500  hover:bg-red-100 py-2 text-sm transition-all duration-200"
-                    : " rounded-lg flex items-center justify-center w-full text-color-Text2 hover:text-color-Text3 hover:bg-color-dark-main-2  py-2 text-sm transition-all duration-200"
+                    ? " rounded-lg flex items-center justify-center w-full text-red-500  hover:bg-red-100 py-2 px-4 text-sm transition-all duration-200"
+                    : " rounded-lg flex items-center justify-center w-full text-color-Text2 hover:text-color-Text3 hover:bg-color-dark-main-2 px-4 py-2 text-sm transition-all duration-200"
                 }
               >
                 {item.title}
