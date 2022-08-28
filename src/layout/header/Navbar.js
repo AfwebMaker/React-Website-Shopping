@@ -49,7 +49,7 @@ const Navbar = () => {
   return (
     <div className="w-full relative">
       <NavbarMobile menu={hambergerMenu} navbarContent={navbarContent} />
-      <div className="max-w-[1536px] mx-auto h-20 bg-color-body-light flex items-center justify-between px-6 fixed w-full lg:static">
+      <div className="max-w-[1536px] mx-auto h-20 bg-color-main-3 flex items-center justify-between px-6 fixed w-full lg:static">
         <div className="lg:hidden px-2 py-2 ml-4 cursor-pointer" onClick={clickHandler}>
           {
             hambergerMenu ? <IoMdClose className="w-5 h-5 text-color-Text2 transition-all duration-300" /> : <FiMenu className="w-5 h-5 text-color-Text2 transition-all duration-300" />
@@ -59,7 +59,7 @@ const Navbar = () => {
         <nav className="flex items-center">
           <div className="h-full">
             <Link className="h-full ml-0 lg:ml-5 flex" to="">
-              <h1 className="text-3xl p-5 font-medium text-color-green transition-all duration-300">
+              <h1 className="text-3xl p-5 font-medium text-color-main-1 transition-all duration-300">
                 لــــوگــــو
               </h1>
             </Link>
@@ -88,7 +88,7 @@ const Navbar = () => {
                   type="text"
                   value={valeu}
                   onChange={changeHandler}
-                  className="flex w-32 h-10 pr-8 pl-4 py-3 text-sm font-normal placeholder:text-gray-400 rounded-lg bg-color-bg-search-navbar bg-clip-padding transition-all duration-300 caret-color-green outline-none emailHelp123ase-in-out m-0 focus:ring-4 focus:ring-[#15cfaa24] focus:border focus:text-gray-600 focus:bg-white focus:border-color-green"
+                  className="flex w-32 h-10 pr-8 pl-4 py-3 text-sm font-normal placeholder:text-gray-400 rounded-lg bg-color-bg-search-navbar bg-clip-padding transition-all duration-300 caret-color-green outline-none emailHelp123ase-in-out m-0 focus:ring-4 focus:ring-color-light-main-1 focus:border focus:text-gray-600 focus:bg-color-main-3 focus:border-color-green"
                   aria-describedby="emailHelp123"
                   placeholder="جستجو"
                 />
@@ -118,7 +118,7 @@ const Navbar = () => {
             </li>
             <li className="ml-1 pr-2 w-[78] h-10 hidden lg:flex">
               <Link
-                className="flex w-full h-full items-center justify-center py-2 px-3 rounded-lg text-white text-sm font-medium bg-color-green transition-all duration-300 hover:bg-opacity-[0.7]"
+                className="flex w-full h-full items-center justify-center py-2 px-3 rounded-lg text-color-main-3 text-sm font-medium bg-color-green transition-all duration-300 hover:bg-opacity-[0.7]"
                 to=""
               >
                 بارگذاری
@@ -132,7 +132,7 @@ const Navbar = () => {
                 className="hidden lg:flex w-fit h-fit py-2 px-3 rounded-lg"
                 to=""
               >
-                <FiSearch className="w-5 h-5 text-[#6e6d7a]" />
+                <FiSearch className="w-5 h-5 text-color-Text2" />
               </Link>
             </li>
             <li className="ml-1">
@@ -145,7 +145,7 @@ const Navbar = () => {
             </li>
             <li className="ml-1">
               <Link
-                className="hidden lg:flex w-fit h-fit py-2 px-3 rounded-lg text-white text-sm font-medium bg-color-green transition-all duration-300 hover:bg-opacity-[0.7]"
+                className="hidden lg:flex w-fit h-fit py-2 px-3 rounded-lg text-color-main-3 text-sm font-medium bg-color-green transition-all duration-300 hover:bg-opacity-[0.7]"
                 to=""
               >
                 کار را به اشتراک بگذارید
