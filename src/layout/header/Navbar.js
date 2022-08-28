@@ -103,7 +103,7 @@ const Navbar = () => {
                 <BsFillBagDashFill className="w-5 h-5 text-[#6e6d7a]" />
               </Link>
             </li>
-            <li className="ml-1 lg:flex h-full flex items-center">
+            <li className="ml-1 hidden lg:flex h-full items-center">
               <Link
                 className="flex w-fit h-fit py-2 px-2 rounded-lg"
                 to=""
@@ -116,9 +116,9 @@ const Navbar = () => {
               </Link>
               <ProfileSubMenu />
             </li>
-            <li className="ml-1 pr-2 w-[78] h-10 hidden lg:flex">
+            <li className="ml-1 pr-2 w-[82px] h-10 hidden lg:flex">
               <Link
-                className="flex w-full h-full items-center justify-center py-2 px-3 rounded-lg text-color-main-3 text-sm font-medium bg-color-green transition-all duration-300 hover:bg-opacity-[0.7]"
+                className="flex w-full h-full items-center justify-center py-2 px-3 rounded-lg text-color-main-3 text-sm font-medium bg-color-main-1 transition-all duration-300 hover:bg-opacity-[0.7]"
                 to=""
               >
                 بارگذاری
