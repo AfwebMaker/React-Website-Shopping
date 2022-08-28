@@ -1,47 +1,58 @@
 import React from 'react'
+//react roter-dom
 import { Link } from 'react-router-dom';
-//icons
+//react icons
 import { AiFillHeart } from 'react-icons/ai'
 import { FaFolderPlus } from 'react-icons/fa'
 
 const ProfileSubMenu = () => {
     return (
-        <div className="h-auto hidden w-[270px] bg-color-main-3 absolute left-1 rounded-lg top-20 shadow-subMenu py-8 lg:block">
+        <div className="h-auto hidden w-[270px] bg-color-main-3 absolute left-1 rounded-lg top-[90%] shadow-subMenu py-8 lg:block">
             <div className="h-[18px] w-[18px] bg-white absolute left-1/2 top-[-2px] translate-x-[-50%] rotate-45"></div>
 
-            <Link className='w-full text-color-Text2 hover:text-color-Text3 flex hover:bg-color-dark-main-2 px-8 py-2 text-sm' to='/'>
+            <Link className='w-full text-color-Text2 hover:text-color-Text3 flex hover:bg-color-light-main-2 px-8 py-2 text-sm' to='/'>
                 <span className='w-full'>
-                    پروفایل
+                    مشخصات
                 </span>
             </Link>
             <hr className='mx-8 m-2'></hr>
-            <Link className='w-full flex text-color-Text2 hover:text-color-Text3 hover:bg-color-dark-main-2 px-8 py-2 text-sm' to='/'>
+            <Link className='w-full flex text-color-Text2 hover:text-color-Text3 hover:bg-color-light-main-2 px-8 py-2 text-sm' to='/'>
                 <span className='w-full'>
-                    ادیت پروفایل
+                    ویرایش نمایه
                 </span>
             </Link>
             <hr className='mx-8 m-2'></hr>
-            <Link className='w-full flex text-color-Text2 hover:text-color-Text3 hover:bg-color-dark-main-2 px-8 py-2 text-sm' to='/'>
+            <Link className='w-full flex text-color-Text2 hover:text-color-Text3 hover:bg-color-light-main-2 px-8 py-2 text-sm' to='/'>
                 <span className='flex items-center ml-2 text-base'><AiFillHeart /></span>
                 <span className='w-full'>
-                    پسند شدها
+                    لایک های من
                 </span>
             </Link>
-            <Link className='w-full flex text-color-Text2 hover:text-color-Text3 hover:bg-color-dark-main-2 px-8 py-2 text-sm' to='/'>
+            <Link className='w-full flex text-color-Text2 hover:text-color-Text3 hover:bg-color-light-main-2 px-8 py-2 text-sm' to='/'>
                 <span className='flex items-center ml-2 text-base'><FaFolderPlus /></span>
                 <span className='w-full'>
-                    مجموعه ها
+                    مجموعه های من
                 </span>
             </Link>
             <hr className='mx-8 m-2'></hr>
-            <Link className='w-full flex text-color-Text2 hover:text-color-Text3 hover:bg-color-dark-main-2 px-8 py-2 text-sm' to='/'>
+            <Link className='w-full flex text-color-Text2 hover:text-color-Text3 hover:bg-color-light-main-2 px-8 py-2 text-sm' to='/'>
                 <span className='w-full'>
-                    تنظیمات اکانت
+                    حالت شب
+                </span>
+                <div className="flex justify-center">
+                    <div className="form-check form-switch">
+                        <input className="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+                    </div>
+                </div>
+            </Link>
+            <Link className='w-full flex text-color-Text2 hover:text-color-Text3 hover:bg-color-light-main-2 px-8 py-2 text-sm' to='/'>
+                <span className='w-full'>
+                    تنظیمات حساب
                 </span>
             </Link>
-            <Link className='w-full flex text-color-Text2 hover:text-color-Text3 hover:bg-color-dark-main-2 px-8 py-2 text-sm' to='/'>
+            <Link className='w-full flex text-color-Text2 hover:text-color-Text3 hover:bg-color-light-main-2 px-8 py-2 text-sm' to='/'>
                 <span className='w-full'>
-                    خروج
+                    خروج از سیستم
                 </span>
             </Link>
         </div>

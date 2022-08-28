@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div>سلام دنیا!</div>
+    <div className='max-w-[1536px] p-[75px] bg-white'>سلام دنیا!</div>
   )
 }
 
