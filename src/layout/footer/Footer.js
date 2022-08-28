@@ -66,7 +66,7 @@ const Footer = () => {
           <div className="text-black col-span-12 lg:col-span-3 text-center lg:text-right mb-14 lg:m-0 transition-all duration-300">
             <div>
               <Link to=''>
-                <h1 className="text-5xl lg:text-4xl xl:text-5xl font-medium text-color-green transition-all duration-300">لــــوگــــو</h1>
+                <h1 className="text-5xl lg:text-4xl xl:text-5xl font-medium text-color-main-1 transition-all duration-300">لــــوگــــو</h1>
               </Link>
             </div>
             <p className="my-5 font-medium text-sm leading-7 text-color-Text1">
