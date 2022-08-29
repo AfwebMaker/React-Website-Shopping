@@ -4,7 +4,7 @@ import Home from '../pages/Home';
 
 const Routers = () => {
     return (
-        <div className='pt-20 lg:pt-0'>
+        <div className='pt-20'>
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='*' element={<h1>چیزی اینجا نیست!</h1>} />
