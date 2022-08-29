@@ -41,7 +41,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="w-full relative border-b-[1px] border-gray-100">
+    <div className="w-full relative border-b-[1px] border-gray-100 z-[9999]">
       <NavbarMobile menu={hamburgerMenu} navbarContent={navbarContent} />
       <div className="max-w-[1536px] mx-auto h-20 bg-color-main-3 flex items-center justify-between px-6 fixed w-full lg:static">
         <div className="lg:hidden px-2 py-2 ml-4 cursor-pointer" onClick={clickHandler}>
