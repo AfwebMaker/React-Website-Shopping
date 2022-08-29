@@ -1,8 +1,12 @@
 import React from 'react'
+// componetns
+import Hero from '../components/Hero';
 
 const Home = () => {
   return (
-    <div className='max-w-[1536px] p-[75px] bg-white'>سلام دنیا!</div>
+    <div className='max-w-[1536px] bg-white'>
+      <Hero />
+    </div>
   )
 }
 
