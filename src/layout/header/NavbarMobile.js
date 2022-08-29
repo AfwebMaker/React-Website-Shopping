@@ -35,20 +35,21 @@ const profileItem = [
   },
 ];
 
-const NavbarMobile = ({ menu, navbarContent }) => {
+const NavbarMobile = ({ menu,signIn ,navbarContent }) => {
   const [value, setValue] = useState("");
   const changeHandler = (e) => {
     setValue(e.target.value);
   };
 
   return (
-    <div className={menu ? "slidingNavbar" : "slidingNavbar -right-[1000px]"}>
+    <div className={menu ? "slidingNavbar" : "slidingNavbar -right-[1000px]" }>
+    <div className="overflow-y-scroll w-full px-6 menuScroll">  
       <div className=" form-group relative w-full max-w-3xl">
         <input
           type="text"
           value={value}
           onChange={changeHandler}
-          className="flex w-full h-10 pr-10 pl-4 py-3 text-sm font-normal placeholder:text-gray-400 rounded-lg bg-color-bg-search-navbar bg-clip-padding transition-all duration-300 caret-color-main-1 outline-none emailHelp123ase-in-out m-0 focus:ring-4 focus:ring-color-light-main-1 border focus:text-gray-600 focus:bg-color-main-3 focus:border-color-main-1"
+          className="flex w-full h-10 pr-10 pl-4 mt-5 py-3 text-sm font-normal placeholder:text-gray-400 rounded-lg bg-color-bg-search-navbar bg-clip-padding transition-all duration-300 caret-color-main-1 outline-none emailHelp123ase-in-out m-0 focus:ring-4 focus:ring-color-light-main-1 border focus:text-gray-600 focus:bg-color-main-3 focus:border-color-main-1"
           aria-describedby="emailHelp123"
           placeholder="جستجو"
         />
@@ -90,7 +91,9 @@ const NavbarMobile = ({ menu, navbarContent }) => {
           </div>
         </div>
       </ul>
-      <hr className="w-full my-5" />
+      {signIn && 
+      <>
+        <hr className="w-full my-5" />
       <div className="mt-10 w-full">
         <div className="text-center cursor-pointer">
           <img
@@ -119,6 +122,9 @@ const NavbarMobile = ({ menu, navbarContent }) => {
           ))}
         </div>
       </div>
+      </>
+      }
+    </div>  
     </div>
   );
 };

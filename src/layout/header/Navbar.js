@@ -41,8 +41,8 @@ const Navbar = () => {
   }
 
   return (
-    <div className="w-full relative border-b-[1px] border-gray-100">
-      <NavbarMobile menu={hamburgerMenu} navbarContent={navbarContent} />
+    <div className="w-full border-b-[1px] border-gray-100 h-20 fixed">
+      <NavbarMobile menu={hamburgerMenu} signIn={signIn} navbarContent={navbarContent} />
       <div className="max-w-[1536px] mx-auto h-20 bg-color-main-3 flex items-center justify-between px-6 fixed w-full lg:static">
         <div className="lg:hidden px-2 py-2 ml-4 cursor-pointer" onClick={clickHandler}>
             <Hamburger isOpen={hamburgerMenu} />  {/*hamburger icon*/}
