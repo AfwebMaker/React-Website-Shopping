@@ -1,13 +1,20 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+//react router dom
+import { Route, Routes, useLocation } from 'react-router-dom';
+//components
 import Home from '../pages/Home';
+import SignIn from '../pages/authentication/SignIn';
+import SignUp from '../pages/authentication/SignUp';
 
 const Routers = () => {
+    const location = useLocation().pathname
     return (
-        <div className='pt-20 lg:pt-0'>
+        <div className={location === "/signIn" || location === "/signUp" ? "" : "pt-20"}>
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='*' element={<h1>چیزی اینجا نیست!</h1>} />
+                <Route path='/signIn' element={<SignIn />} />
+                <Route path='/signUp' element={<SignUp />} />
             </Routes>
         </div>
     );

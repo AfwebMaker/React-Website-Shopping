@@ -106,9 +106,8 @@ const NavbarMobile = ({ menu,signIn ,navbarContent }) => {
         </div>
         <div className="grid grid-cols-12 my-10 border border-color-main-1 hover:ring-4 hover:ring-color-light-main-1 rounded-lg p-5 max-w-3xl m-auto transition-all duration-300">
           {profileItem.map((item) => (
-            <span className="w-full col-span-12 sm:col-span-6 px-8 sm:px-16 py-1">
+            <span key={item.id} className="w-full col-span-12 sm:col-span-6 px-8 sm:px-16 py-1">
               <Link
-                key={item.id}
                 to="/"
                 className={
                   item.title === "خروج"
