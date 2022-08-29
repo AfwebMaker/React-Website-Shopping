@@ -6,10 +6,16 @@
 body{
     background-color:#fff ;
 }
+.menuScroll::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
 
 @layer components {
     .slidingNavbar{
-      @apply bg-color-main-3 absolute top-[80px] right-0 w-full flex flex-col items-center lg:hidden h-auto py-5 px-6 transition-all duration-500 
+      @apply bg-color-main-3 absolute top-[80px] right-0 w-full flex flex-col items-center lg:hidden h-[calc(100vh-80px)] py-5 transition-all duration-500 
     }
   }
+
+  
   /* [calc(100vh-80px)] */
