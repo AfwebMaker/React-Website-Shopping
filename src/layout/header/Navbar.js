@@ -84,7 +84,7 @@ const Navbar = () => {
             <li className="ml-1 hidden lg:flex h-full items-center group">
               <Link
                 className="flex w-fit h-fit py-2 px-2 rounded-lg"
-                to=""
+                to="/profile/shots"
               >
                 <img
                   src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"

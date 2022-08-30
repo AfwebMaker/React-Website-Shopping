@@ -25,6 +25,7 @@ const Profile = () => {
               isActive ? "text-black" : ""
             }>
               آثار
+              <span className='align-middle mr-1'>0</span>
             </NavLink>
           </li>
           <li className='p-6 pr-0'>
@@ -32,6 +33,7 @@ const Profile = () => {
               isActive ? "text-black" : ""
             }>
               علاقه مندی ها
+              <span className='align-middle mr-1'>0</span>
             </NavLink>
           </li>
           <li className='p-6 pr-0'>
@@ -39,6 +41,7 @@ const Profile = () => {
               isActive ? "text-black" : ""
             }>
               مجموعه ها
+              <span className='align-middle mr-1'>0</span>
             </NavLink>
           </li>
           <li className='p-6 pr-0'>
