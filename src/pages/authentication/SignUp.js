@@ -47,7 +47,7 @@ const SignUp = () => {
             <img src={imageSignUp} className="w-5/6 " alt="" />
           </div>
           <div className="w-1/2 h-full  flex items-center justify-center">
-            <div className="flex p-6 rounded-lg shadow-lg bg-white max-w-md">
+            <div className="flex p-6 rounded-lg shadow-2xl bg-white max-w-md">
               <form>
                 {inputsItem.name === "name" || inputsItem.name === "lastname" ? 
                   <div className="grid grid-cols-2 gap-4">
