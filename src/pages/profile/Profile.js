@@ -21,7 +21,7 @@ const Profile = () => {
       <div>
         <ul className='flex text-color-Text2'>
           <li className='p-6 pr-0'>
-            <NavLink to='/profile/shots' className={({isActive}) =>
+            <NavLink to='/profile/shots' className={({ isActive }) =>
               isActive ? "text-black" : ""
             }>
               آثار
@@ -29,7 +29,7 @@ const Profile = () => {
             </NavLink>
           </li>
           <li className='p-6 pr-0'>
-            <NavLink to='/profile/likes' className={({isActive}) =>
+            <NavLink to='/profile/likes' className={({ isActive }) =>
               isActive ? "text-black" : ""
             }>
               علاقه مندی ها
@@ -37,7 +37,7 @@ const Profile = () => {
             </NavLink>
           </li>
           <li className='p-6 pr-0'>
-            <NavLink to='/profile/collections' className={({isActive}) =>
+            <NavLink to='/profile/collections' className={({ isActive }) =>
               isActive ? "text-black" : ""
             }>
               مجموعه ها
@@ -45,7 +45,7 @@ const Profile = () => {
             </NavLink>
           </li>
           <li className='p-6 pr-0'>
-            <NavLink to='/profile/about' className={({isActive}) =>
+            <NavLink to='/profile/about' className={({ isActive }) =>
               isActive ? "text-black" : ""
             }>
               درباره من
@@ -53,8 +53,12 @@ const Profile = () => {
           </li>
         </ul>
       </div>
+
       <hr />
-      <Outlet />
+
+      <div className='my-10'>
+        <Outlet />
+      </div>
     </div >
   )
 }
