@@ -8,7 +8,7 @@ const Hero = () => {
             <video className='absolute w-full h-full object-cover z-[0] opacity-30' src="https://cdn.dribbble.com/uploads/39417/original/49dbf46eae15d227fc95a69cee31251e.mp4?1657824906" autoPlay loop muted></video>
             <div className='flex justify-center items-center flex-col z-10'>
                 <div className='flex justify-center items-center flex-col mb-16 md:m-8'>
-                    <span className='text-white md:text-3xl text-2xl font-extrabold m-2 text-center'>
+                    <span className='text-white md:text-3xl text-2xl font-extrabold m-2 text-center px-5'>
                         انواع قالب ضایعات شیر آلات خریداریم
                     </span>
                     <span className='text-white m-2 text-center text-sm md:text-base w-full max-w-[642px] px-5'>
