@@ -25,18 +25,18 @@ const inputsItem = [
     label: "ایمیل",
     name:"email"
   },
-  // {
-  //   id: 4,
-  //   type: "number",
-  //   label: "موبایل",
-  //   name:"number"
-  // },
-  // {
-  //   id: 5,
-  //   type: "password",
-  //   label: "رمز",
-  //   name:"password"
-  // },
+  {
+    id: 4,
+    type: "number",
+    label: "موبایل",
+    name:"number"
+  },
+  {
+    id: 5,
+    type: "password",
+    label: "رمز",
+    name:"password"
+  },
 ];
 const SignUp = () => {
   return (
@@ -46,11 +46,11 @@ const SignUp = () => {
           <div className="w-1/2 flex items-center justify-center h-full">
             <img src={imageSignUp} className="w-5/6 " alt="" />
           </div>
-          <div className="w-1/2 h-full  flex items-center justify-center">
+          <div className="w-1/2 h-full bg-fuchsia-400 flex items-center justify-center">
             <div className="flex p-6 rounded-lg shadow-lg bg-white max-w-md">
               <form>
-                {inputsItem.name === "name" || inputsItem.name === "lastname" ? 
-                  <div className="grid grid-cols-2 gap-4">
+                
+                <div className="grid grid-cols-2 gap-4">
                   {inputsItem.map((item) => (
                     <div key={item.id} className="form-group">
                       <label
@@ -74,54 +74,6 @@ const SignUp = () => {
                     </div>
                   ))}
                 </div>
-                : 
-                <>
-                {inputsItem.map((item) => (
-                  <div key={item.id} className="form-group">
-                    <label
-                      for="exampleFormControlInput1"
-                      className="form-label text-sm inline-block mb-2 mr-1 text-gray-700"
-                    >
-                      {item.label}
-                    </label>
-                    <input
-                      type={item.type}
-                      className=" flex w-full px-3 py-1.5 text-sm font-normal  text-gray-700  bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0  focus:text-gray-700 focus:bg-white focus:border-color-main-1 focus:ring-4 focus:ring-color-light-main-1 focus:outline-none"
-                      id="exampleInput123"
-                      aria-describedby="emailHelp123"
-                      name={item.name}
-                    />
-                    <div className="mt-[2px]">
-                      <span className="text-red-600 text-[10px] bg-red-100 px-3 rounded-md py-[2px]">
-                        ایمیل درست وارد نشده
-                      </span>
-                    </div>
-                  </div>
-                ))}</> }
-                {/* <div className="grid grid-cols-2 gap-4">
-                  {inputsItem.map((item) => (
-                    <div key={item.id} className="form-group">
-                      <label
-                        for="exampleFormControlInput1"
-                        className="form-label text-sm inline-block mb-2 mr-1 text-gray-700"
-                      >
-                        {item.label}
-                      </label>
-                      <input
-                        type={item.type}
-                        className=" flex w-full px-3 py-1.5 text-sm font-normal  text-gray-700  bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0  focus:text-gray-700 focus:bg-white focus:border-color-main-1 focus:ring-4 focus:ring-color-light-main-1 focus:outline-none"
-                        id="exampleInput123"
-                        aria-describedby="emailHelp123"
-                        name={item.name}
-                      />
-                      <div className="mt-[2px]">
-                        <span className="text-red-600 text-[10px] bg-red-100 px-3 rounded-md py-[2px]">
-                          ایمیل درست وارد نشده
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div> */}
 
                 <button
                   type="submit"
@@ -146,7 +98,17 @@ const SignUp = () => {
                   <FaGoogle className="ml-2 text-color-Text3" />
                   با گوگل ادامه دهید
                 </a>
-                
+                <a
+                  className="px-7 py-3 text-color-Text3 font-medium text-sm rounded-lg shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center bg-color-dark-main-2"
+                  href="#!"
+                  role="button"
+                  data-mdb-ripple="true"
+                  data-mdb-ripple-color="light"
+                >
+                  {/* Twitter  */}
+                  <FaTwitter className="ml-2 text-color-Text3" />
+                  با توییتر ادامه دهید
+                </a>
                 <p className="text-xs mt-5 py-1 text-center">
                    ورود شما به معنای پذیرش  
                   <Link className="text-color-main-1" to=""> شرایط لـــوگـــو </Link>
