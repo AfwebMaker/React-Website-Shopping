@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 //react roter-dom
 import { Link } from 'react-router-dom';
 //react icons
-import { AiFillHeart } from 'react-icons/ai'
-import { FaFolderPlus } from 'react-icons/fa'
+import { AiFillHeart } from 'react-icons/ai';
+import { FaFolderPlus } from 'react-icons/fa';
 
 const ProfileSubMenu = () => {
-    const [darkMode, setDarkMode] = useState(false)
+    const [darkMode, setDarkMode] = useState(false);
     const darkModeHandler = () => {
-        setDarkMode(!darkMode)
+        setDarkMode(!darkMode);
     }
 
     return (

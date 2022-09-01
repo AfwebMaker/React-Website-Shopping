@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       padding: {
-        '2/3': '66.666666%',
+        '2/3': '70%',
         '1/3': '33.333333%'
       },
       boxShadow: {
