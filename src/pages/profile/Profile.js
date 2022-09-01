@@ -3,7 +3,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 
 const Profile = () => {
   return (
-    <div className='max-w-[1536px] w-full px-[75px]'>
+    <div className='max-w-[1536px] w-full px-5 md:px-8 lg:px-20'>
       <div className='w-full flex justify-center py-10'>
         <img
           src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
