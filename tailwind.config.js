@@ -3,6 +3,10 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", './src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js',],
   theme: {
     extend: {
+      padding: {
+        '2/3': '66.666666%',
+        '1/3': '33.333333%'
+      },
       boxShadow: {
         'subMenu': '-4px 10px 50px rgb(0 0 0 / 10%)',
       },
