@@ -60,7 +60,7 @@ const Card = ({ avatar, name, likes, view, cover, video, title }) => {
             <div className='w-full mt-2 flex items-center text-sm justify-between'>
                 <Link className='flex items-center overflow-hidden ml-2' to='/'>
                     <img className='w-6 h-6 object-cover rounded-full flex ml-2' src={avatar} alt="avatar" />
-                    <span className='flex-1 overflow-hidden whitespace-nowrap text-ellipsis'>{name}</span>
+                    <span className='flex-1 overflow-hidden whitespace-nowrap text-ellipsis text-color-Text3'>{name}</span>
 
                 </Link>
                 <div className='flex items-center'>
