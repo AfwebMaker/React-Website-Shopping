@@ -17,5 +17,18 @@ body{
     }
   }
 
+  @layer components {
+    .uncomplited{
+      @apply flex w-full px-3 py-1.5 text-sm font-normal  text-gray-700  bg-white bg-clip-padding border border-solid border-red-500 rounded transition ease-in-out m-0  focus:text-gray-700 focus:bg-white ring-4 ring-red-100 focus:outline-none 
+    }
+  }
+
+  @layer components {
+    .forminput{
+      @apply flex w-full px-3 py-1.5 text-sm font-normal  text-gray-700  bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0  focus:text-gray-700 focus:bg-white focus:border-color-main-1 focus:ring-4 focus:ring-color-light-main-1 focus:outline-none 
+    }
+  }
+
   
   /* [calc(100vh-80px)] */
+  /* ring-4 ring-red-100 */
