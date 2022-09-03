@@ -14,7 +14,7 @@ import AboutSubMenu from '../pages/profile/AboutSubMenu';
 const Routers = () => {
     const location = useLocation().pathname
     return (
-        <div className={location === "/signIn" || location === "/signUp" ? "" : "pt-20"}>
+        <div className={location === "/signin" || location === "/signup" ? "" : "pt-20"}>
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/profile' element={<Profile />}>
@@ -24,8 +24,8 @@ const Routers = () => {
                     <Route path='/profile/collections' element={<CollectionSubMenu />}></Route>
                     <Route path='/profile/about' element={<AboutSubMenu />}></Route>
                 </Route>
-                <Route path='/signIn' element={<SignIn />} />
-                <Route path='/signUp' element={<SignUp />} />
+                <Route path='/signin' element={<SignIn />} />
+                <Route path='/signup' element={<SignUp />} />
                 <Route path='*' element={<h1>چیزی اینجا نیست!</h1>} />
             </Routes>
         </div>

@@ -11,9 +11,9 @@ const Layout = () => {
     const location = useLocation().pathname
     return (
         <div className="max-w-[1536px] m-auto">
-            {location === "/signIn" || location === "/signUp" ? "" : <Navbar />}
+            {location === "/signin" || location === "/signup" ? "" : <Navbar />}
                 <Routers />
-            {location === "/signIn" || location === "/signUp" ? "" : <Footer />}
+            {location === "/signin" || location === "/signup" ? "" : <Footer />}
         </div>
     );
 };

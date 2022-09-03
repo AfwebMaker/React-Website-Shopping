@@ -32,7 +32,7 @@ const navbarContent = [
 ];
 
 const Navbar = () => {
-  const [signIn] = useState(true);
+  const [signIn] = useState(false);
   const [hamburgerMenu, setHamburgerMenu] = useState(false)
 
   const clickHandler = () => {
@@ -111,7 +111,7 @@ const Navbar = () => {
             <li className="ml-1">
               <Link
                 className="flex w-fit h-fit py-2 px-3 rounded-lg text-color-Text2 font-normal"
-                to=""
+                to="/signin"
               >
                 ورود
               </Link>

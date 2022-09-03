@@ -128,6 +128,5 @@ const NavbarMobile = ({ menu,signIn ,navbarContent }) => {
   );
 };
 
-// className=" rounded-lg flex items-center justify-center w-full text-color-Text2 hover:text-color-Text3 hover:bg-color-dark-main-2  py-2 text-sm"
 
 export default NavbarMobile;
