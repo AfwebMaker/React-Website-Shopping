@@ -22,7 +22,7 @@ const Card = ({ avatar, name, likes, view, cover, video, title }) => {
                             <FaVideo />
                         </div>
                     }
-                    <HoverVideoPlayer
+                    {video ? <HoverVideoPlayer
                         className='w-full h-0 pb-2/3 relative'
                         videoSrc={video}
                         videoClassName='inset-0 absolute top-0 h-full w-full object-cover'
@@ -39,7 +39,13 @@ const Card = ({ avatar, name, likes, view, cover, video, title }) => {
                                 <div className="loading-spinner" />
                             </div>
                         }
-                    />
+                    /> :
+                        <img
+                            src={cover}
+                            alt="cover"
+                            className='inset-0 absolute top-0 h-full w-full object-cover'
+                        />
+                    }
                     <div className='opacity-0 group-hover:opacity-100 transition-all duration-500 absolute w-full h-1/3 z-10 bottom-0 from-transparent to-black bg-gradient-to-b '>
                         <div className='flex items-center justify-between px-4 absolute w-full bottom-5'>
                             <span className='align-middle text-white text-md overflow-hidden whitespace-nowrap text-ellipsis pl-2'>

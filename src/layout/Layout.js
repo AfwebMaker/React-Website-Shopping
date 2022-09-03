@@ -9,7 +9,6 @@ import { useLocation } from 'react-router-dom';
 const Layout = () => {
 
     const location = useLocation().pathname
-    console.log(location)
     return (
         <div className="max-w-[1536px] m-auto">
             {location === "/signIn" || location === "/signUp" ? "" : <Navbar />}
