@@ -32,7 +32,7 @@ const navbarContent = [
 ];
 
 const Navbar = () => {
-  const [signIn] = useState(false);
+  const [signIn] = useState(true);
   const [hamburgerMenu, setHamburgerMenu] = useState(false)
 
   const clickHandler = () => {
