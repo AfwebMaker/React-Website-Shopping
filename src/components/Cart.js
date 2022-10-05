@@ -108,7 +108,7 @@ const data = [
 const Cart = () => {
     return (
         <div className='px-5 md:px-8 lg:px-20'>
-            <div className='grid grid-cols-1 gap-9 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-16 mb-10'>
+            <div className='grid grid-cols-1 gap-9 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-5 mb-10'>
                 {data && data.map(item => (
                     <Card
                         key={item.id}

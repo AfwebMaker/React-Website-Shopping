@@ -36,7 +36,7 @@ const productsData = [
 const Hero = () => {
     return (
         <div className='relative w-full h-[560px] bg-slate-900 flex justify-center items-center overflow-hidden'>
-            <video className='absolute w-full h-full object-cover z-[0] opacity-30' src="https://cdn.dribbble.com/uploads/39417/original/49dbf46eae15d227fc95a69cee31251e.mp4?1657824906" autoPlay loop muted></video>
+            <video className='absolute w-full h-full object-cover z-[0] opacity-30' src="https://cdn.dribbble.com/uploads/39421/original/963b4f8739cbdf86ca3f3a23245efd18.mp4?1657824985" autoPlay loop muted></video>
             <div className='flex justify-center items-center flex-col z-10'>
                 <div className='w-full flex justify-center items-center'>
                     <ul className='flex flex-wrap justify-center items-center mb-5 lg:mb-10 text-white'>
