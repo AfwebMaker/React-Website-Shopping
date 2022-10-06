@@ -6,19 +6,21 @@ import { BsCheck, BsChevronBarExpand } from 'react-icons/bs';
 
 
 const people = [
-  { name: 'محبوب' },
-  { name: 'جدید و قابل توجه' },
-  { name: 'مارکت' },
+  { name: 'اکنون' },
+  { name: 'یک هفته گذشته' },
+  { name: 'یک ماه گذشته' },
+  { name: 'یک سال گذشته' },
+  { name: 'همیشه' },
 ]
 
-export default function Example() {
+export default function ListboxTime() {
   const [selected, setSelected] = useState(people[0])
 
   return (
-    <div className="z-50 col-span-8 mb-5 flex items-center justify-start">
+    <div className="z-50 col-span-8 flex items-center justify-star mt-2">
       <Listbox value={selected} onChange={setSelected}>
-        <div className="relative w-44">
-          <Listbox.Button className="border border-color-light-main-2 relative w-full cursor-pointer rounded-lg bg-white py-2 pl-10 pr-3 text-right shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus:ring-4 hover:ring-4 hover:ring-color-light-main-1 hover:border hover:border-color-main-1 focus:border focus:border-color-main-1 focus:ring-color-light-main-1 sm:text-sm transition-all duration-300 outline-none ">
+        <div className="relative w-full">
+          <Listbox.Button className="border cursor-pointer border-color-light-main-2 relative w-full rounded-lg bg-white py-2 pl-10 pr-3 text-right shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus:ring-4 hover:ring-4 hover:ring-color-light-main-1 hover:border hover:border-color-main-1 focus:border focus:border-color-main-1 focus:ring-color-light-main-1 sm:text-sm transition-all duration-300 outline-none ">
             <span className="block truncate">{selected.name}</span>
             <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center pr-2">
                 <BsChevronBarExpand/>
