@@ -19,7 +19,7 @@ export default function ListboxDownload() {
   const [selected, setSelected] = useState(people[0])
 
   return (
-    <div className="z-50 col-span-8 flex items-center justify-star mt-2">
+    <div className="z-40 col-span-8 flex items-center justify-star mt-2">
       <Listbox value={selected} onChange={setSelected}>
         <div className="relative w-full">
           <Listbox.Button className="border border-color-light-main-2 relative w-full cursor-pointer rounded-lg bg-white py-2 pl-10 pr-3 text-right shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus:ring-4 hover:ring-4 hover:ring-color-light-main-1 hover:border hover:border-color-main-1 focus:border focus:border-color-main-1 focus:ring-color-light-main-1 sm:text-sm transition-all duration-300 outline-none ">
