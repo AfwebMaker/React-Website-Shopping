@@ -21,7 +21,7 @@ const ProfileSubMenu = () => {
                 </span>
             </Link>
             <hr className='mx-8 m-2'></hr>
-            <Link className='w-full flex text-color-Text2 hover:text-color-Text3 hover:bg-color-light-main-2 px-8 py-2 text-sm' to='/'>
+            <Link className='w-full flex text-color-Text2 hover:text-color-Text3 hover:bg-color-light-main-2 px-8 py-2 text-sm' to='/account/profile'>
                 <span className='w-full'>
                     ویرایش نمایه
                 </span>

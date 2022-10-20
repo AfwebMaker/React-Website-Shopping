@@ -47,10 +47,10 @@ const Hero = () => {
                 </div>
                 <div className='flex justify-center items-center flex-col mb-16 md:m-8'>
                     <span className='text-white lg:text-4xl md:text-3xl text-2xl font-extrabold m-2 text-center px-5 transition-all duration-200'>
-                        انواع قالب ضایعات شیر آلات خریداریم
+                        انواع قالب و طرح های آماده
                     </span>
                     <span className='text-white m-2 text-center text-sm md:text-base font-light w-full max-w-[642px] px-5'>
-                        در این مکان بسیار زیبا ما ضایعات شیر آلات و وسایلی در اختیار شما قرار میدهیم تا به هم سن و سالان خود پز بدهید. بشتابید بشتاب و به حراج اخر هفته برسید.
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
                     </span>
                 </div>
                 <div className='max-w-[600px] w-full flex items-center justify-center relative z-10 px-5'>

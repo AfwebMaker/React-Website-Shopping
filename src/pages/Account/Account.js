@@ -53,7 +53,7 @@ const Account = () => {
   
   
   return (
-    <div className="p-5 sm:p-8 flex items-center justify-center">
+    <div className="p-4 sm:p-8 flex items-center justify-center">
       <div className="max-w-4xl w-full py-8  grid grid-cols-12">
         <div className="col-span-12 mb-14 flex items-center">
           <div className="flex items-center justify-center">

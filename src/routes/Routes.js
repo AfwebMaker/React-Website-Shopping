@@ -46,8 +46,8 @@ const Routers = () => {
                     <Route path='/account/sessions' element={<Sessions />}></Route>
                     <Route path='/account/applications' element={<Applications />}></Route>
                     <Route path='/account/export' element={<Export />}></Route>
-                    <Route path='/account/destroy_confirm' element={<DestroyConfirm />}></Route>
                 </Route>
+                <Route path='/account/destroy_confirm' element={<DestroyConfirm />}></Route>
                 <Route path='/signin' element={<SignIn />} />
                 <Route path='/signup' element={<SignUp />} />
                 <Route path='*' element={<h1>چیزی اینجا نیست!</h1>} />
